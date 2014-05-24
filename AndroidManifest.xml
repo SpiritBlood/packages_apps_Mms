@@ -241,10 +241,6 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".ui.SelectMmsSubscription"
-            android:exported="true">
-        </service>
-
         <!-- Require sender permissions to prevent SMS spoofing -->
         <receiver android:name=".transaction.PrivilegedSmsReceiver"
             android:permission="android.permission.BROADCAST_SMS">
@@ -261,14 +257,6 @@
             </intent-filter>
         </receiver>
 
-        <!-- Require the sender to have this permission to prevent third party spoofing -->
-        <receiver android:name=".transaction.PrivilegedCbReceiver"
-            android:permission="android.permission.RECEIVE_EMERGENCY_BROADCAST">
-            <intent-filter>
-                <action android:name="android.cellbroadcastreceiver.CB_AREA_INFO_RECEIVED" />
-            </intent-filter>
-        </receiver>
-
         <!-- Catch-all receiver for broadcasts that don't have associated security -->
         <receiver android:name=".transaction.SmsReceiver">
             <intent-filter>
@@ -282,9 +270,6 @@
             </intent-filter>
             <intent-filter>
                 <action android:name="android.intent.action.SEND_MESSAGE" />
-            </intent-filter>
-            <intent-filter>
-                <action android:name="com.android.mms.transaction.SEND_MESSAGE" />
             </intent-filter>
         </receiver>
 

@@ -29,7 +29,6 @@ import android.os.StrictMode;
 import android.preference.PreferenceManager;
 import android.provider.SearchRecentSuggestions;
 import android.telephony.TelephonyManager;
-import android.telephony.MSimTelephonyManager;
 import android.util.Log;
 
 import com.android.mms.data.Contact;
@@ -50,7 +49,6 @@ public class MmsApp extends Application {
 
     private SearchRecentSuggestions mRecentSuggestions;
     private TelephonyManager mTelephonyManager;
-    private MSimTelephonyManager mSimTelephonyManager;
     private CountryDetector mCountryDetector;
     private CountryListener mCountryListener;
     private String mCountryIso;
@@ -156,13 +154,6 @@ public class MmsApp extends Application {
                     .getSystemService(Context.TELEPHONY_SERVICE);
         }
         return mTelephonyManager;
-    }
-    public MSimTelephonyManager getMSimTelephonyManager() {
-        if (mSimTelephonyManager == null) {
-            mSimTelephonyManager = (MSimTelephonyManager)getApplicationContext()
-                    .getSystemService(Context.MSIM_TELEPHONY_SERVICE);
-        }
-        return mSimTelephonyManager;
     }
 
     /**
