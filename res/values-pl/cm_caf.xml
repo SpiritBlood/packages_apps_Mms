@@ -17,12 +17,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="cell_broadcast_sender">Kanał transmisji komórki</string>
-  <string name="mms1">MMS 1</string>
-  <string name="mms2">MMS 2</string>
-  <string name="mms3">MMS 3</string>
-  <string name="sub1">USŁ 1</string>
-  <string name="sub2">USŁ 2</string>
-  <string name="sub3">USŁ 3</string>
   <string name="disk_storage_full_error">Błąd: Pamięć zapełniona.</string>
   <string name="system_audio_item">Systemowe audio</string>
   <string name="external_audio_item">Zewnętrzne audio</string>
